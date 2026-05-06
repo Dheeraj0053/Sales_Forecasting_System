@@ -1,0 +1,16 @@
+version: "3.9"
+
+services:
+  forecasting-api:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: forecasting-api
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./data:/app/data
+      - ./artifacts:/app/artifacts
+    environment:
+      - PYTHONUNBUFFERED=1
+    command: uvicorn api.main:app --host 0.0.0.0 --port 8000 --reload

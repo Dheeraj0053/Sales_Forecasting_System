@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Timeseries Forecast</title>
+    <!-- Modern Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Chart.js for data visualization -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <div class="bg-shape shape-1"></div>
+    <div class="bg-shape shape-2"></div>
+    <div class="bg-shape shape-3"></div>
+
+    <main class="container">
+        <header>
+            <h1><span class="gradient-text">Predictive</span> Intelligence</h1>
+            <p>8-Week Sales Forecasting via Multi-Model Engine</p>
+        </header>
+
+        <div class="dashboard">
+            <aside class="sidebar glass-panel">
+                <div class="control-group">
+                    <label for="stateSelect">Target Region</label>
+                    <div class="select-wrapper">
+                        <select id="stateSelect" disabled>
+                            <option>Loading regions...</option>
+                        </select>
+                        <div class="select-arrow"></div>
+                    </div>
+                </div>
+
+                <div class="info-card">
+                    <h3>Model Architecture</h3>
+                    <div class="model-stat">
+                        <span class="stat-label">Best Model</span>
+                        <span class="stat-value highlight" id="bestModelValue">---</span>
+                    </div>
+                    <div class="model-stat">
+                        <span class="stat-label">Version Ref</span>
+                        <span class="stat-value small-text" id="modelVersionValue">---</span>
+                    </div>
+                    <div class="model-stat">
+                        <span class="stat-label">Horizon</span>
+                        <span class="stat-value">8 Weeks</span>
+                    </div>
+                </div>
+                
+                <button id="generateBtn" class="primary-btn" disabled>
+                    <span class="btn-text">Generate Forecast</span>
+                    <span class="loader hidden"></span>
+                </button>
+            </aside>
+
+            <section class="main-content">
+                <div class="chart-container glass-panel">
+                    <div class="chart-header">
+                        <h2>Sales Trajectory</h2>
+                        <div class="chart-badge" id="chartBadge">Awaiting Selection</div>
+                    </div>
+                    <div class="canvas-wrapper">
+                        <canvas id="forecastChart"></canvas>
+                    </div>
+                </div>
+
+                <div class="metrics-grid">
+                    <div class="metric-card glass-panel">
+                        <span class="metric-icon">📈</span>
+                        <div class="metric-info">
+                            <h4>Week 1 Projection</h4>
+                            <p id="week1Val" class="metric-number">---</p>
+                        </div>
+                    </div>
+                    <div class="metric-card glass-panel">
+                        <span class="metric-icon">🚀</span>
+                        <div class="metric-info">
+                            <h4>Week 8 Projection</h4>
+                            <p id="week8Val" class="metric-number">---</p>
+                        </div>
+                    </div>
+                    <div class="metric-card glass-panel">
+                        <span class="metric-icon">📊</span>
+                        <div class="metric-info">
+                            <h4>8-Week Cumulative</h4>
+                            <p id="cumulativeVal" class="metric-number">---</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <script src="/static/app.js"></script>
+</body>
+</html>

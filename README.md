@@ -224,3 +224,13 @@ GitHub Actions workflow at `.github/workflows/ci.yml` runs:
 - Model artifacts are separated per state for clean deployment and rollback.
 - Architecture is modular for maintainability and testability.
 - You can add CI/CD, monitoring, and model drift checks on top of this foundation.
+
+## Screenshots
+<img width="1920" height="1080" alt="Screenshot (209)" src="https://github.com/user-attachments/assets/2532de98-96d9-4988-972e-302752ad8b93" />
+<img width="1920" height="1080" alt="Screenshot (210)" src="https://github.com/user-attachments/assets/9d8236fd-ff0b-4af8-a4e3-2efc75cae2ad" />
+<img width="1920" height="1080" alt="Screenshot (212)" src="https://github.com/user-attachments/assets/c50b7335-b271-472f-b356-f877dc67ac1d" />
+
+
+
+
+

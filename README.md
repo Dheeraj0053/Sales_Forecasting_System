@@ -1,4 +1,4 @@
-# Production-Ready Time Series Forecasting System
+# Production-Ready Sales Forecasting System
 
 ## Problem Statement
 Build a robust backend pipeline to forecast the next **8 weeks of sales for each state** from an Excel dataset.  
